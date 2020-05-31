@@ -1,0 +1,15 @@
+{
+    "name": "@gridspace/log-util",
+    "version": "0.0.3",
+    "license": "MIT",
+    "private": false,
+    "author": "Stewart Allen <sa@grid.space>",
+    "keywords": "prettier console.log output",
+    "main": "log-util.js",
+    "files": [
+        "package.json"
+    ],
+    "dependencies": {
+        "moment": "^2.22.0"
+    }
+}
