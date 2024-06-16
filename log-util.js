@@ -1,22 +1,10 @@
 const moment = require('moment');
 const util = require('util');
 const path = require('path');
-const fs = require('fs');
-
-function lastmod(path) {
-    try {
-        return fs.statSync(path).mtime.getTime();
-    } catch (e) {
-        return 0;
-    }
-}
+const fs = require('fs-extra');
 
 function mkdir(path) {
-    let root = "";
-    path.split("/").forEach(dir => {
-        root = root ? `${root}/${dir}` : dir || '/';
-        lastmod(root) || fs.mkdirSync(root);
-    });
+    fs.ensureDirSync(path);
 }
 
 class LogUtil {
